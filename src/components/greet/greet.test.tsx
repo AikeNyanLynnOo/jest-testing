@@ -8,6 +8,13 @@ describe("Greet With Hello", () => {
     const helloText = screen.getByText(/hello/i);
     expect(helloText).toBeInTheDocument();
   });
+  describe("Nested", () => {
+    test("Testing h1 is Exist?", () => {
+      render(<Greet />);
+      const h1 = screen.getByText("Nested");
+      expect(h1).toBeInTheDocument();
+    });
+  });
 });
 describe("Greet With Name", () => {
   test("Greet Component receives prop-name correctly and output correctly", () => {

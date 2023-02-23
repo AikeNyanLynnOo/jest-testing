@@ -3,5 +3,10 @@ interface GreetProps {
 }
 
 export const Greet = (props: GreetProps) => {
-  return <div>Hello {props.name}</div>;
+  return (
+    <div>
+      <h1>Nested</h1>
+      <div>Hello {props.name}</div>;
+    </div>
+  );
 };
